@@ -1,0 +1,5 @@
+.tab-periodic{
+  display: grid;
+  grid-template-columns: repeat(18);
+  grid-template-rows: repeat(10);
+}
