@@ -1,12 +1,43 @@
+
 .tab-periodic{
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(10, 1fr);
+  gap: .5rem;
 }
 .tab-periodic article{
-  background-color: bisque;
-  border: 1px solid saddlebrown;
-  color: black;
+  min-width: 26px;
+  min-height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #86A789;
+  border-radius: 4px;
+  padding: 4px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform .2s ease-in-out;
+}
+.tab-periodic article:hover{
+  transform: scale(1.15);
+  transition: transform .2s ease-in-out;
+}
+.tab-periodic .atomic-number{
+  align-self: flex-start;
+  color: #EBF3E8;
+  font-size: min(.5vw, 60px);
+  
+}
+.atomic-symbol{
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #004225;
+}
+.atomic-name{
+  text-overflow: hidden;
+  font-size: .5rem;
+  color: #EBF3E8;
 }
 .tab-periodic .Helium{
   grid-column: 18/19;
@@ -157,7 +188,134 @@
 .tab-periodic .Rutherfordium {
   grid-column: 4/5;
 }
+/* Colores segun su category */
+.tab-periodic .diatomic {
+  background-color: #00A9FF;
+}
+.tab-periodic .alkali {
+  background-color: #F11A7B;
+}
+.tab-periodic .alkaline {
+  background-color: #F7DB6A;
+}
+.tab-periodic .transition {
+  background-color: #FFA559;
+}
+.tab-periodic .post-transition {
+  background-color: #A73121;
+}
+.tab-periodic .metalloid {
+  background-color: #98E19A;
+}
+.tab-periodic .polyatomic {
+  background-color: #618264;
+}
+.tab-periodic .noble {
+  background-color: #A0E9FF;
+}
+.tab-periodic .lanthanide {
+  background-color: #BEADFA;
+}
+.tab-periodic .actinide {
+  background-color: #9772FB;
+}
 
 .tab-periodic article p{
   text-align: center;
+}
+.tab-periodic .asteric{
+  color: #FFF6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  grid-column: 3/4;
+  grid-row: 6/7;
+  margin: 0;
+}
+.tab-periodic .asteric2{
+  grid-row: 7/8;
+}
+.tab-periodic .asteric-info{
+  color: #FFF6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  grid-column: 2/4;
+  grid-row: 9/10;
+  margin: 0;
+}
+.tab-periodic .asteric-info2 {
+  grid-row: 10/11;
+}
+.tab-periodic .principal-element{
+  background-color: #86A789;
+  color: #004225;
+  font-weight: 900;
+  border-radius: 4px;
+  text-align: center;
+  grid-column: 4/12;
+  grid-row: 1/4;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tab-periodic .principal-element .card-element {
+  margin: 1rem;
+  aspect-ratio: 1;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  z-index: 5;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  justify-content: space-between;
+}
+.tab-periodic .principal-element .card-element .seccion-one{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  min-height: 32px;
+}
+.tab-periodic .principal-element .card-element .seccion-one .atomic_masa{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 600;
+  line-height: 1;
+
+}
+.tab-periodic .principal-element .card-element .seccion-one .atomic_number{
+  font-weight: 600;
+  align-self: self-start;
+  font-size: 1.8rem;
+  line-height: 1;
+
+}
+.tab-periodic .principal-element .card-element .seccion-one .electon_energy{
+  display: flex;
+  gap: 8px;
+}
+.tab-periodic .principal-element .card-element .seccion-two {
+  display: flex;
+  justify-content: space-between;
+}
+.tab-periodic .principal-element .card-element .seccion-two .principal-char {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_symbol{
+  font-size: 3rem;
+  line-height: 1;
+}
+.tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_name {
+  line-height: 1;
+}
+.tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_electron {
+  font-weight: 500;
+  font-size: 12px;
 }
