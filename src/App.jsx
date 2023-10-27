@@ -1,12 +1,14 @@
 import datos from './mock/elements.json'
 import './App.css'
 import { useState } from 'react'
+
 export const App = () => {
   const [elemento, setElemento] = useState('Hidrogeno')
   const element = (dato) => {
     const nombre = dato || 'Helio'
     return setElemento(nombre)
   }
+
   return (
     <>
       <main className="tab-periodic">
@@ -29,9 +31,9 @@ export const App = () => {
           <div className={`card-element ${elemento.category}`}>
             <div className="seccion-one">
               <div className="atomic_masa">
-                <p>{elemento.atomic_mass}</p>
+                <p>{elemento.atomic_mass?.toFixed(4)}</p>
                 <div className="electon_energy">
-                  <p>{elemento?.ionization_energies[0]}</p>
+                  <p>{elemento.ionization_energies?.at()}</p>
                   <p>{elemento.electronegativity_pauling}</p>
                 </div>
               </div>

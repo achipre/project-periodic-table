@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: .5rem;
+  /* gap: .5rem; */
 }
 .tab-periodic article{
   min-width: 26px;
@@ -20,7 +20,7 @@
   transition: transform .2s ease-in-out;
 }
 .tab-periodic article:hover{
-  transform: scale(1.15);
+  transform: scale(1.1);
   transition: transform .2s ease-in-out;
 }
 .tab-periodic .atomic-number{
@@ -202,7 +202,7 @@
   background-color: #FFA559;
 }
 .tab-periodic .post-transition {
-  background-color: #A73121;
+  background-color: #C08261;
 }
 .tab-periodic .metalloid {
   background-color: #98E19A;
@@ -284,6 +284,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-size: min(1vw, 14px);
   font-weight: 600;
   line-height: 1;
 
@@ -317,5 +318,5 @@
 }
 .tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_electron {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 8px;
 }
