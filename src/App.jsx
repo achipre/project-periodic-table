@@ -49,22 +49,22 @@ export const App = () => {
           <p className="info-element atomic-electronic_el">
             <span className="atomic-masa_arrow"></span> electronegatividad
           </p>
-          <div className={`card-element ${elemento.category}`}>
+          <div className={`card-element ${elemento.category || 'diatomic'}`}>
             <div className="seccion-one">
               <div className="atomic_masa">
-                <p className='atomic-masa_info'>{elemento.atomic_mass?.toFixed(4)}</p>
+                <p className="atomic-masa_info">{elemento.atomic_mass?.toFixed(4) || 1.0080}</p>
                 <div className="electon_energy">
-                  <p>{elemento.ionization_energies?.at()}</p>
-                  <p>{elemento.electronegativity_pauling}</p>
+                  <p>{elemento.ionization_energies?.at() || 1312}</p>
+                  <p>{elemento.electronegativity_pauling || 2.2}</p>
                 </div>
               </div>
-              <p className="atomic_number">{elemento.number}</p>
+              <p className="atomic_number">{elemento.number || 1}</p>
             </div>
             <div className="seccion-two">
               <div className="principal-char">
-                <p className="principal_symbol">{elemento.symbol}</p>
-                <p className="principal_name">{elemento.name}</p>
-                <p className="principal_electron">{elemento.electron_configuration_semantic}</p>
+                <p className="principal_symbol">{elemento.symbol || 'H'}</p>
+                <p className="principal_name">{elemento.name || 'Hydrogen'}</p>
+                <p className="principal_electron">{elemento.electron_configuration_semantic || '1s1'}</p>
               </div>
               <p>{elemento.oxydation_state}</p>
             </div>
