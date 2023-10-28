@@ -52,7 +52,7 @@ export const App = () => {
           <div className={`card-element ${elemento.category}`}>
             <div className="seccion-one">
               <div className="atomic_masa">
-                <p>{elemento.atomic_mass?.toFixed(4)}</p>
+                <p className='atomic-masa_info'>{elemento.atomic_mass?.toFixed(4)}</p>
                 <div className="electon_energy">
                   <p>{elemento.ionization_energies?.at()}</p>
                   <p>{elemento.electronegativity_pauling}</p>

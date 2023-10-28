@@ -71,3 +71,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media (width < 768px){
+  body{
+    display: flex;
+    align-items: center;
+    place-content: unset;
+  }
+}

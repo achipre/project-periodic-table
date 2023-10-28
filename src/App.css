@@ -2,6 +2,7 @@
 .tab-periodic{
   display: grid;
   grid-template-columns: repeat(18, 1fr);
+  min-width: 768px;
 }
 .tab-periodic article{
   min-width: 26px;
@@ -270,7 +271,7 @@
   z-index: 9;
 }
 .tab-periodic .principal-element .atomic-masa_name{
-  top: 6%;
+  top: 10%;
 }
 .tab-periodic .principal-element .atomic-masa_name .atomic-masa_arrow,
 .tab-periodic .principal-element .atomic-energy_el .atomic-masa_arrow,
@@ -305,11 +306,10 @@
   width: min(82px, 8vw);
 }
 .tab-periodic .principal-element .atomic-electronic_el .atomic-masa_arrow{
-  transform: rotateZ(17deg) translateY(-3000%);
-  width: min(182px, 12vw);
+  width: min(155px, 15vw);
 }
 .tab-periodic .principal-element .atomic-energy_el{
-  top: 13%;
+  top: 20%;
 }
 .tab-periodic .principal-element .atomic-symbol_el{
   bottom: 40%;
@@ -322,11 +322,11 @@
 }
 .tab-periodic .principal-element .atomic-numero_el{
   right: 0;
-  top: 10%;
+  top: 12%;
 }
 .tab-periodic .principal-element .atomic-electronic_el{
   right: 0;
-  top: 40%;
+  top: 21%;
 }
 .tab-periodic .principal-element .card-element {
   aspect-ratio: 1;
@@ -346,12 +346,20 @@
 }
 .tab-periodic .principal-element .card-element .seccion-one .atomic_masa{
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
   font-size: min(1vw, 14px);
   font-weight: 600;
   line-height: 1;
 
+}
+.tab-periodic .principal-element .card-element .seccion-one .atomic_masa .atomic-masa_info{
+  padding: 4px;
+  font-size: min(1.5vw, 16px);
+}
+.tab-periodic .principal-element .card-element .seccion-one .atomic_masa .electon_energy{
+  padding-left: 4px;
 }
 .tab-periodic .principal-element .card-element .seccion-one .atomic_number{
   font-weight: 600;
