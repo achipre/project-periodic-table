@@ -264,7 +264,7 @@
   position: relative;
 }
 .tab-periodic .principal-element .info-element{
-  font-size: min(1vw, 12px);
+  font-size: clamp(8px, 1.05vw, 12px);
   color: #EBF3E8;
   position: absolute;
   font-weight: 400;
@@ -289,24 +289,31 @@
 }
 .tab-periodic .principal-element .atomic-masa_name .atomic-masa_arrow{
   width: min(98px, 8vw);
+  min-width: 61px;
 }
 .tab-periodic .principal-element .atomic-energy_el .atomic-masa_arrow{
   width: min(42px, 3vw);
+  min-width: 23px;
 }
 .tab-periodic .principal-element .atomic-symbol_el .atomic-masa_arrow{
   width: min(82px, 6.5vw);
+  min-width: 50px;
 }
 .tab-periodic .principal-element .atomic-name_el .atomic-masa_arrow{
   width: min(132px, 10.8vw);
+  min-width: 83px;
 }
 .tab-periodic .principal-element .atomic-config_el .atomic-masa_arrow{
   width: min(74px, 8vw);
+  min-width: 72px;
 }
 .tab-periodic .principal-element .atomic-numero_el .atomic-masa_arrow{
   width: min(82px, 8vw);
+  min-width: 61px;
 }
 .tab-periodic .principal-element .atomic-electronic_el .atomic-masa_arrow{
   width: min(155px, 15vw);
+  min-width: 115px;
 }
 .tab-periodic .principal-element .atomic-energy_el{
   top: 20%;
