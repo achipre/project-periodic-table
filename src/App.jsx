@@ -28,6 +28,27 @@ export const App = () => {
         <p className="asteric-info">* Lantánidos</p>
         <p className="asteric-info asteric-info2">** Actínidos</p>
         <div className="principal-element">
+          <p className="info-element atomic-masa_name">
+            masa atómica <span className="atomic-masa_arrow"></span>
+          </p>
+          <p className="info-element atomic-energy_el">
+            1º energía de ionización <span className="atomic-masa_arrow"></span>
+          </p>
+          <p className="info-element atomic-symbol_el">
+            Simbolo quimico <span className="atomic-masa_arrow"></span>
+          </p>
+          <p className="info-element atomic-name_el">
+            nombre <span className="atomic-masa_arrow"></span>
+          </p>
+          <p className="info-element atomic-config_el">
+            config eléctronica <span className="atomic-masa_arrow"></span>
+          </p>
+          <p className="info-element atomic-numero_el">
+            <span className="atomic-masa_arrow"></span> numero atómico
+          </p>
+          <p className="info-element atomic-electronic_el">
+            <span className="atomic-masa_arrow"></span> electronegatividad
+          </p>
           <div className={`card-element ${elemento.category}`}>
             <div className="seccion-one">
               <div className="atomic_masa">

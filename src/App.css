@@ -2,8 +2,6 @@
 .tab-periodic{
   display: grid;
   grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  /* gap: .5rem; */
 }
 .tab-periodic article{
   min-width: 26px;
@@ -13,11 +11,11 @@
   justify-content: space-between;
   align-items: center;
   background-color: #86A789;
-  border-radius: 4px;
   padding: 4px;
   aspect-ratio: 1;
   cursor: pointer;
   transition: transform .2s ease-in-out;
+  outline: 1px solid #000000;
 }
 .tab-periodic article:hover{
   transform: scale(1.1);
@@ -27,6 +25,7 @@
   align-self: flex-start;
   color: #EBF3E8;
   font-size: min(.5vw, 60px);
+  line-height: 1;
   
 }
 .atomic-symbol{
@@ -228,10 +227,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: max(2vw,38px);
   grid-column: 3/4;
   grid-row: 6/7;
   margin: 0;
+  max-height: 24px;
+  transform: translateY(50%);
+  
 }
 .tab-periodic .asteric2{
   grid-row: 7/8;
@@ -250,35 +252,97 @@
   grid-row: 10/11;
 }
 .tab-periodic .principal-element{
-  background-color: #86A789;
   color: #004225;
   font-weight: 900;
   border-radius: 4px;
   text-align: center;
   grid-column: 4/12;
   grid-row: 1/4;
-  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+.tab-periodic .principal-element .info-element{
+  font-size: min(1vw, 12px);
+  color: #EBF3E8;
+  position: absolute;
+  font-weight: 400;
+  z-index: 9;
+}
+.tab-periodic .principal-element .atomic-masa_name{
+  top: 6%;
+}
+.tab-periodic .principal-element .atomic-masa_name .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-energy_el .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-symbol_el .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-name_el .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-config_el .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-numero_el .atomic-masa_arrow,
+.tab-periodic .principal-element .atomic-electronic_el .atomic-masa_arrow
+{
+  background-color: #EBF3E8;
+  display: inline-flex;
+  height: 1px;
+  z-index: 9;
+  transform: translateY(-200%);
+}
+.tab-periodic .principal-element .atomic-masa_name .atomic-masa_arrow{
+  width: min(98px, 8vw);
+}
+.tab-periodic .principal-element .atomic-energy_el .atomic-masa_arrow{
+  width: min(42px, 3vw);
+}
+.tab-periodic .principal-element .atomic-symbol_el .atomic-masa_arrow{
+  width: min(82px, 6.5vw);
+}
+.tab-periodic .principal-element .atomic-name_el .atomic-masa_arrow{
+  width: min(132px, 10.8vw);
+}
+.tab-periodic .principal-element .atomic-config_el .atomic-masa_arrow{
+  width: min(74px, 8vw);
+}
+.tab-periodic .principal-element .atomic-numero_el .atomic-masa_arrow{
+  width: min(82px, 8vw);
+}
+.tab-periodic .principal-element .atomic-electronic_el .atomic-masa_arrow{
+  transform: rotateZ(17deg) translateY(-3000%);
+  width: min(182px, 12vw);
+}
+.tab-periodic .principal-element .atomic-energy_el{
+  top: 13%;
+}
+.tab-periodic .principal-element .atomic-symbol_el{
+  bottom: 40%;
+}
+.tab-periodic .principal-element .atomic-name_el{
+  bottom: 16%;
+}
+.tab-periodic .principal-element .atomic-config_el{
+  bottom: 7%;
+}
+.tab-periodic .principal-element .atomic-numero_el{
+  right: 0;
+  top: 10%;
+}
+.tab-periodic .principal-element .atomic-electronic_el{
+  right: 0;
+  top: 40%;
 }
 .tab-periodic .principal-element .card-element {
-  margin: 1rem;
   aspect-ratio: 1;
   grid-column: 2/3;
   grid-row: 1/3;
-  z-index: 5;
   text-align: center;
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
   padding: 4px;
   justify-content: space-between;
+  transform: translateY(6%);
 }
 .tab-periodic .principal-element .card-element .seccion-one{
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  min-height: 32px;
 }
 .tab-periodic .principal-element .card-element .seccion-one .atomic_masa{
   display: flex;
@@ -294,6 +358,7 @@
   align-self: self-start;
   font-size: 1.8rem;
   line-height: 1;
+  font-size: min(3vw, 36px);
 
 }
 .tab-periodic .principal-element .card-element .seccion-one .electon_energy{
@@ -312,11 +377,14 @@
 .tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_symbol{
   font-size: 3rem;
   line-height: 1;
+  font-size: min(6vw, 84px);
 }
 .tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_name {
   line-height: 1;
+  font-size: min(1.6vw, 20px);
 }
 .tab-periodic .principal-element .card-element .seccion-two .principal-char .principal_electron {
   font-weight: 500;
   font-size: 8px;
+  font-size: min(1vw, 8px);
 }
